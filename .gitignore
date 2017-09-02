@@ -1,0 +1,9 @@
+build/*
+paper_major.aux
+paper_major.bbl
+paper_major.bcf
+paper_major.blg
+paper_major.log
+paper_major.run.xml
+paper_major.synctex.gz
+paper_major.pdf
