@@ -208,7 +208,7 @@
 \usepackage{booktabs}
 \usepackage{pgfplots}
 \usepackage{tikz}
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber,sorting=none]{biblatex}
 
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
@@ -236,6 +236,7 @@
 \definecolor{ggreen}{HTML}{9BBB59}
 \definecolor{ppurple}{HTML}{9F4C7C}
 \addbibresource{bibtex.bib}
+
 
 
 \begin{document}
@@ -294,12 +295,11 @@
 % use section* for acknowledgment
 
 \import{sections/}{introduction.tex}
+\import{sections/}{related_work.tex}
 \import{sections/}{method.tex}
 \import{sections/}{results.tex}
 % \import{sections/}{bibliography.tex}
 
-%\bibliography{bibtex}{}
-%\bibliographystyle{plain}
 
 \printbibliography
 
