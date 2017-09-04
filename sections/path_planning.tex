@@ -38,11 +38,12 @@ The agent receives two 200x200 input image streams from the left and right camer
 This depth map is filtered and cropped to focus on the target window W for the agent, and mean intensity statistics are computed. If the agent evaluates the mean intensity to be above a threshold T, it decides that the heuristic generated next-cube isn't safe for traversal and directs it to present an alternate option. This process continues until the heuristic selects a subsequent neighbouring cube with no detected obstacles.
 
 \begin{algorithm}
-\caption{Calculate $y = x^n$}
+\caption{Experiment Workflow}
 \label{alg1}
 \begin{algorithmic}[1]
 \STATE Import Blender model, and obstacles from the Shapenet Database
-\STATE Two cubes are selected
+\STATE Initialize neural network and load CNN model weights
+\STATE Two cubes are selected (src\_cube or dest\_cube)
 \STATE Ensure there is no collision with src\_cube or dest\_cube
 \STATE Initialize agent controller with these initial values
 \STATE Interface agent controller with left and right camera stream
