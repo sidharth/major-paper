@@ -24,16 +24,17 @@ Validation loss was determined to be in the order of 10-3 .
 
 The performance of the algorithm with different heuristics is stated in the following table below.
  
-S No. = Scenario number of experiment, with each scenario having different source and destination points
-MManhattan : The step count of the control policy using Manhattan distance as base distance heuristic.
+$ \mathrm{S No.} $ = Scenario number of experiment, with each scenario having different source and destination points.
+
+$ \mathrm{M}_\mathrm{Man} $ : The step count of the control policy using Manhattan distance as base distance heuristic.
  
-MEuclidean : The step count of the control policy using Euclidean distance as base distance heuristic.
+$ \mathrm{M}_\mathrm{Euc} $ : The step count of the control policy using Euclidean distance as base distance heuristic.
  
-Human Benchmark : The step count of a human performing the experiment
+$ \mathrm{Human Baseline} $: The step count of a human performing the experiment
  
-Relative MManhattan : The ratio of MEuclidean to Human Benchmark performance (Lower is Better)
+$ \mathrm{R}_\mathrm{Man} $ : The ratio of Euclidean to Baseline performance (Lower is Better)
  
-Relative MEuclidean : The ratio of MEuclidean to Human Benchmark performance (Lower is Better)
+$ \mathrm{R}_\mathrm{Euc} $ : The ratio of Euclidean to Baseline performance (Lower is Better)
 
 \begin{table}[h!]
   \centering
@@ -56,11 +57,14 @@ Relative MEuclidean : The ratio of MEuclidean to Human Benchmark performance (Lo
 
 
 The average relative performance of the Manhattan based heuristic was found to be 1.81
+
 The median relative performance of the Manhattan based heuristic was found to be 2.01
+
 The average relative performance of the Euclidean based heuristic was found to be 1.80
+
 The median relative performance of the Euclidean based heuristic was found to be 1.88
  
-Despite the comparable measures of the average relative performance, the average is susceptible to outliers in the observations, hence the median is a better measure of the relative performance of the heuristics.
+The average metric is susceptible to outliers in observations and is hence a less reliable metric for evaluation. The median metric is able to circumvent this problem, and is thus a better measure of the relative performances of the heuristics in this situation.
   
 The Euclidean heuristic equaled or outperformed the Manhattan heuristic on 85.71\% of the experiments, and is hence a better heuristic for evaluation.
 
