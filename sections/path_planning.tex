@@ -1,7 +1,7 @@
 \subsection{Path Planning}
 The entire 3 dimensional environment is divided into N unit volume cubes, centred at integer coordinates.
  
-A modified A* algorithm is used as the basis for path planning. It is augmented by the depth map discussed in the previous section. The interfacing between the algorithm and the generated depth map will be discussed in the subsequent section.
+A heuristic aided search algorithm is used as the basis for path planning. It is augmented by the depth map discussed in the previous section. The interfacing between the algorithm and the generated depth map will be discussed in the subsequent section.
 
 The following implicit data structures and objects are maintained by the agent controller object:
  
@@ -33,7 +33,7 @@ Two distance heuristics were compared in the experiment:
 
 The entire 3 dimensional environment is divided into virtual unit volume cubes, centred at integer coordinates. There are 8 immediately neighbouring cubes to which the agent can move. The path planner locally generates the next cube towards which it intends to move based on the heuristic.
 
-The agent receives two 200x200 input image streams from the left and right cameras based on which it must plan it's short term path and avoid obstacles. The agent step rotates and faces the heuristic selection. The agent uses the trained CNN to generate a single 200x200 pixel depth map from the stereo image camera stream.
+The agent receives two $200\times200$ input image streams from the left and right cameras based on which it must plan it's short term path and avoid obstacles. The agent step rotates and faces the heuristic selection. The agent uses the trained CNN to generate a single $200\times200$ pixel depth map from the stereo image camera stream.
 
 This depth map is filtered and cropped to focus on the target window W for the agent, and mean intensity statistics are computed. If the agent evaluates the mean intensity to be above a threshold T, it decides that the heuristic generated next-cube isn't safe for traversal and directs it to present an alternate option. This process continues until the heuristic selects a subsequent neighbouring cube with no detected obstacles.
 
