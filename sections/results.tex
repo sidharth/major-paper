@@ -16,24 +16,13 @@ Validation loss was determined to be in the order of 10-3 .
   \label{fig:depthmap2}
 \end{figure}
 
-The performance of the algorithm with different heuristics is stated in Table 1.
+The performance of the algorithm with different heuristics is given in Table 1.
  
-{\boldm $ \mathrm{S No.} $ }= Scenario number of experiment, with each scenario having different source and destination points.
-
-{\boldm $ \mathrm{M}_\mathrm{Man} $} : The step count of the control policy using Manhattan distance as base distance heuristic.
- 
-{\boldm $ \mathrm{M}_\mathrm{Euc} $} : The step count of the control policy using Euclidean distance as base distance heuristic.
- 
-{\boldm $ \mathrm{Human}\:\mathrm{Baseline} $} : The step count of a human performing the experiment
- 
-{\boldm $ \mathrm{R}_\mathrm{Man} $} : The ratio of Euclidean to Baseline performance (Lower is Better)
- 
-{\boldm $ \mathrm{R}_\mathrm{Euc} $} : The ratio of Euclidean to Baseline performance (Lower is Better)
-
 \begin{table}[h!]
   \centering
-  \caption{Caption for the table.}
+  \caption{Performance Metrics}
   \label{tab:table1}
+  \begin{threeparttable}
   \begin{tabular}{cccccc}
     \toprule
         \textbf{S No}. & \textbf{Human Baseline} & {\boldm $\mathrm{M}_{\mathrm{Man}}$} & {\boldm $\mathrm{M}_{\mathrm{Euc}}$}  & {\boldm $\mathrm{R}_{\mathrm{Man}}$} & {\boldm $\mathrm{R}_{\mathrm{Euc}}$}\\
@@ -49,8 +38,16 @@ The performance of the algorithm with different heuristics is stated in Table 1.
       \textbf{Average} &-&-&-& \textbf{1.81} & \textbf{1.80}\\
     \bottomrule
   \end{tabular}
+  \begin{tablenotes}
+    \item {\boldm $ \mathrm{S No.} $ }: Scenario number, with each scenario having different source and destination points.
+    \item {\boldm $ \mathrm{Human}\:\mathrm{Baseline} $}: Step count of a human performing the experiment
+    \item {\boldm $ \mathrm{M}_\mathrm{Man} $}: Step count of the control policy using Manhattan distance as heuristic.
+    \item {\boldm $ \mathrm{M}_\mathrm{Euc} $}: Step count of the control policy using Euclidean distance as heuristic.
+    \item {\boldm $ \mathrm{R}_\mathrm{Man} $}: Ratio of Manhattan to Baseline performance (Lower is Better)
+    \item {\boldm $ \mathrm{R}_\mathrm{Euc} $}: Ratio of Euclidean to Baseline performance (Lower is Better)
+  \end{tablenotes}
+  \end{threeparttable}
 \end{table}
-
 
 The average relative performance of the Manhattan based heuristic was found to be 1.81
 
