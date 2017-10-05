@@ -11,8 +11,6 @@ There has recently been increased interest in using video game data to train com
 
 Nikolaus Mayer et al. ~\cite{MayerIHFCDB15} present a method for visual scene generation using an open source 3D modelling software Blender3D which includes stereo color images and ground truth for bidirectional disparity, bidirectional optical flow and disparity change, motion boundaries, and object segmentation.
 
-using synthetic data
-depth estimation
-neural networks for depth estimation
-path planning
-localised path planning
+Existing methods for disparity map estimation include semi global matching (SGM) proposed by Hirschmuller \cite{Hirschmuller} and MC-CNN, proposed by Zbontar and LeCunn, a convolutional neural network which compares image patches to initialize the stereo matching cost \cite{ZbontarL15}.
+
+Mayer et. al. also propose a convolutional neural network, DispNet, in their work which they evaluate against the beforementioned approaches. They find that DispNet outpermforms the other two in various datasets ~\cite{MayerIHFCDB15}. The neural network architecture mentioned in our approach is based on DispNet.
