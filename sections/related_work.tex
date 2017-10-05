@@ -3,9 +3,7 @@ Synthetic generated imagery is a useful tool in computer vision as it allows for
 
 Synthetically generated data has been used in several instances in the past to augment performance. Taylor et al. present a system called Object Video Virtual Video (OVVV) ~\cite{Taylor_2007} based on Half-life for evaluation of tracking in surveillance systems. 
  
-In the recent literature, Peng et al. , and Sun and Saenko use synthetic CAD generated images models to fine-tune on the object detection task and significantly outperform previous methods with this approach. 
-
-Lim et al. , and Aubry et al. use CAD models for detection and object alignment in the image. Aubry and Russell use synthetic RGB images rendered from CAD models to analyze the response pattern and the behavior of neurons in the commonly used deep convolutional networks.
+Peng et al. ~\cite{PengSAS14} use synthetic CAD generated images models to fine-tune on the object detection task and significantly outperform previous methods with this approach. Lim et al. ~\cite{Lim2013} , and Aubry et al. use CAD models for detection and object alignment in the image. Aubry and Russell use synthetic RGB images rendered from CAD models to analyze the response pattern and the behavior of neurons in the commonly used deep convolutional networks.
 
 There has recently been increased interest in using video game data to train computer vision models ~\cite{Shafaei_LS16}. Although video games generate images from a finite set of textures, there is variation in viewpoint, illumination, weather, and level of detail which could provide valuable augmentation of the data. 
 
@@ -14,3 +12,7 @@ Nikolaus Mayer et al. ~\cite{MayerIHFCDB15} present a method for visual scene ge
 Existing methods for disparity map estimation include semi global matching (SGM) proposed by Hirschmuller \cite{Hirschmuller} and MC-CNN, proposed by Zbontar and LeCunn, a convolutional neural network which compares image patches to initialize the stereo matching cost \cite{ZbontarL15}.
 
 Mayer et. al. also propose a convolutional neural network, DispNet, in their work which they evaluate against the beforementioned approaches. They find that DispNet outpermforms the other two in various datasets ~\cite{MayerIHFCDB15}. The neural network architecture mentioned in our approach is based on DispNet.
+
+There has been historical prior work in localised path planning, where the mobile robot aims to use local sensory information in a reactive fashion ~\cite{Rimon1998}.
+
+Ziegler et al. present a mechanism for depth sensor based detection of target object and for generation of trajectories for a robot-aided scanning process for inspection and verification processes. ~\cite{Ziegler2018}.
