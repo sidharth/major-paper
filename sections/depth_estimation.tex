@@ -26,6 +26,6 @@ The placement and rotation of each model is random, and 3 scenes are rendered:
 This dataset of 20,000 images was normalized along each pixel to aid the training process.
 
 A Convolutional Neural Network for estimating depth maps using a stereo image pair was trained. The network accepts as input 2 grayscale images and produces an estimate of the depth map corresponding to the images \cite{MayerIHFCDB15} \cite{foucard_2016}.
-A loss function of mean squared error was used to as the objective. The network was trained using an Adam Optimizer \cite{KingmaB14}, with learning rate 0.01. Hold out validation with split 10\%  was performed i.e 18,000 training examples were used as the training set and 2000 as validation set. The validation loss and training loss at each epoch were recorded. The training was halted once validation loss did not improve significantly.
+A loss function of mean squared error was used to as the objective. The network was trained using an Adam Optimizer \cite{KingmaB14}, with learning rate 0.01. Hold out validation with split 10\%  was performed i.e 18,000 training examples were used as the training set and 2000 as the validation set. The validation loss and training loss at each epoch were recorded. The training was halted once validation loss did not improve significantly.
 Loss function used:
 \[ L(x_n,y_n) = {\sum_{i=1}^{200}\sum_{j=1}^{200}} (y_{ij} - x_{ij})^2 \]
