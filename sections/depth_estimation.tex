@@ -3,14 +3,14 @@ A blender script was created to generate randomized 3D situations for analysis. 
 Through this training, we aim to obtain a neural network that takes input as stereo images and output the depth parity. This depth parity would later used as part of the short-term path planner in the control policy.
 Shapenet \cite{shapenet2015}, an annotated, large-scale dataset of 3D shapes was used as obstacles in the training phase of the CNN for depth parity estimation, and as the obstacles for the agent to circumnavigate in the test phase.
 
-\begin{figure}
-  \includegraphics[width=\linewidth]{images/shapenet.png}
-  \caption{Shapenet Dataset}
-  \label{fig:boat1}
-\end{figure}
-
 A dataset of 20,000 training examples was generated using 3D models from the Shapenet dataset. For each example, 8-10 models were chosen at random and placed in the scene.
 The placement and rotation of each model is random, and 3 scenes are rendered:
+
+\begin{figure}[!htb]
+\includegraphics[width=\linewidth]{images/network.png}
+\caption{Network Architecture}
+\label{fig:network}
+\end{figure}
 
 \begin{figure}[!htb]
   \includegraphics[width=\linewidth]{images/depthmap1.png}
